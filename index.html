@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,37 +9,105 @@
     </head>
 
     <body>
-        <header>
-            <h1>Algo Muy Raro</h1>
-            <nav>Inicio | Noticias | Contacto</nav>
-            <main>
-                <section id="noticias">
-                    <h2>Noticias</h2>
-
-                    <article class="noticia" id="noticia1">
-                        <h3>Algo extremadamente raro sucedió...</h3>
-                        <p>Es de verdad, en esta noticia pasará algo raro <span style="color: red;"><strong>¿Verdad?</strong></span></p>
-                    </article>
-                    
-                    <article class="noticia" id="noticia2">
-                        <h3>Cuando no pasó nada</h3>
-                        <p>En este momento, todo está normal, no ha pasado nada raro <mark>¿Verdad?</mark></p>
-                    </article>
-                </section>
-
-                <section id="actividades">
-                    <h2>Actividades</h2>
-                </section>
-
-                <aside>Próximos eventos</aside>
-                <footer>
-                    <!-- <p style="margin-bottom: 0;">Desde 2026 hasta 2027</p> -->
-                    Desde 2026 hasta 2027
-                    <address>Antonio Concha, 71 - Navalmoral de la Mata</address>
-                </footer>
-            </main>
+        <header id="headerId">
+            <figure id="imgAnimeLogo">
+                <img id="imgAnimeLogo" src="./imgs/logo.png" alt="imgError">
+                <figcaption>Este es el logo</figcaption>
+                
+            </figure>
+            <h1>Algo <span class="importantWords">Muy</span> Raro</h1>
         </header>
 
-        
+            <nav id="navigator">
+                <a href="#noticias">Noticias</a>
+                <a href="#actividades">Actividades</a>
+                <a href="https://images.alphacoders.com/131/thumb-1920-1311951.jpg">Otra Cosa</a>
+            </nav>
+
+        <main>
+            <section id="noticias">
+                <h2>Noticias</h2>
+
+                <article class="noticia" id="noticia1">
+                    <h3>Algo extremadamente raro sucedió...</h3>
+                    <p>
+                        Es de verdad, en esta noticia pasará algo raro 
+                        <span style="color: red;"><strong>¿Verdad?</strong></span>
+                    </p>
+                </article>
+
+                <article class="noticia" id="noticia2">
+                    <h3>Cuando no pasó nada</h3>
+                    <p>
+                        En este momento, todo está normal, no ha pasado nada raro 
+                        <mark>¿Verdad?</mark>
+                    </p>
+                </article>
+            </section>
+
+            <section id="actividades">
+                <h2>Actividades</h2>
+                <ul>
+                    <li>Gacha</li>
+                    <li>Juegos</li>
+                    <li>Ajedrez</li>
+                </ul>
+            </section>
+        </main>
+
+        <aside>Próximos eventos</aside>
+        <ol>
+            <li>Evento</li>
+            <li>OVAs</li>
+            <li>Anime</li>
+        </ol>
+
+        <details>
+            <summary>Lista summary</summary>
+            <p>Lunes a viernes</p>
+        </details>
+
+        <br>
+
+        <table>
+            <caption>Caption de la tabla</caption>
+            <colgroup>
+                <col style="background-color: rgba(0, 255, 255, 0.178);">
+                <col span="2" style="background-color: rgba(255, 0, 0, 0.158);">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>1 Columna</th>
+                    <th>2 Columna</th>
+                    <th>3 Columna</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1 Columna</td>
+                    <td>2 Columna</td>
+                    <td>3 Columna</td>
+                </tr>
+                <tr>
+                    <td>1 Columna</td>
+                    <td>2 Columna</td>
+                    <td>3 Columna</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="2">total...</th>
+                    <th>2</th>
+                </tr>
+            </tfoot>
+        </table>
+
+        <br>
+
+        <footer>
+            <!-- <p style="margin-bottom: 0;">Desde 2026 hasta 2027</p> -->
+            Desde 2026 hasta 2027
+            <address>Antonio Concha, 71 - Navalmoral de la Mata</address>
+        </footer>
     </body>
 </html>

@@ -1,0 +1,42 @@
+#headerId {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 5%;
+}
+
+/*
+#noticias {
+
+}
+
+#actividades {
+
+}
+*/
+
+#navigator {
+    display: flex;
+    text-align: center;
+    gap: 1%;
+    color: rgb(219, 158, 158);
+}
+
+#navigator a {
+    color: rgb(255, 0, 0, 1);
+}
+
+#imgAnimeLogo {
+    width: 50px;
+    height: 50px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#headerId h1 {
+    color: black;
+}
+
+.importantWords {
+    color: red;
+}
