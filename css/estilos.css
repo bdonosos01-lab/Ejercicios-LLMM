@@ -1,0 +1,20 @@
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+tfoot {
+    font-weight: bold;
+}
+
+.firstCol {
+    background-color: aquamarine;
+}
+
+.secondCol {
+    background-color: blueviolet;
+}
+
+.thirdCol {
+    background-color: plum;
+}
