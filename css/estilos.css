@@ -8,13 +8,13 @@ tfoot {
 }
 
 .firstCol {
-    background-color: aquamarine;
+    background-color: rgb(98, 255, 203);
 }
 
 .secondCol {
-    background-color: blueviolet;
+    background-color: rgb(132, 118, 252);
 }
 
 .thirdCol {
-    background-color: plum;
+    background-color: rgb(243, 163, 243);
 }
