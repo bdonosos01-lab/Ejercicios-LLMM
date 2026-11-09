@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<!--
+  TAREA UT2 · Formularios dentro de tablas
+  Escuela Municipal de Musica de Navalmoral de la Mata
+  Alumno/a: Brian Donoso Sánchez  
+  Completa los bloques marcados con TODO siguiendo el modelo de la seccion 1.
+-->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ficha de inscripcion de la Escuela Municipal de Musica de Navalmoral de la Mata">
+  <title>Inscripcion · Escuela Municipal de Musica de Navalmoral de la Mata</title>
+
+  <!-- ESTILO PROPORCIONADO POR EL PROFESOR: NO ES NECESARIO MODIFICARLO -->
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f4f1ea;
+      color: #2b2b2b;
+      margin: 0;
+      padding: 20px;
+    }
+    header, footer {
+      text-align: center;
+    }
+    header h1 {
+      color: #7a1f2b;
+      margin-bottom: 4px;
+    }
+    header p {
+      margin-top: 0;
+      color: #555555;
+    }
+    table {
+      width: 900px;
+      margin: 0 auto;
+      border-collapse: collapse;
+      background-color: #ffffff;
+    }
+    caption {
+      font-size: 1.3em;
+      font-weight: bold;
+      padding: 10px;
+      color: #7a1f2b;
+    }
+    th, td {
+      border: 1px solid #c9b8a4;
+      padding: 8px;
+      vertical-align: top;
+    }
+    th {
+      background-color: #f3e6d8;
+      text-align: left;
+      width: 22%;
+    }
+    th.seccion {
+      background-color: #7a1f2b;
+      color: #ffffff;
+      font-size: 1.1em;
+    }
+    tfoot td {
+      text-align: center;
+      background-color: #f3e6d8;
+    }
+    input[type="text"], input[type="email"], input[type="tel"],
+    input[type="date"], select, textarea {
+      width: 95%;
+      padding: 4px;
+      font-family: inherit;
+    }
+    button {
+      padding: 8px 20px;
+      margin: 4px;
+      font-size: 1em;
+    }
+    footer {
+      margin-top: 20px;
+      font-size: 0.85em;
+      color: #555555;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Escuela Municipal de Música</h1>
+    <p>Navalmoral de la Mata · Ficha de inscripción de alumnado</p>
+  </header>
+
+  <main>
+    <form action="#" method="post" enctype="multipart/form-data">
+      <table>
+        <caption>Inscripción · Curso 2026/2027</caption>
+
+        <!-- ========== 1. DATOS DEL ALUMNO/A (SECCIÓN DE EJEMPLO, YA RESUELTA) ========== -->
+        <tbody>
+          <tr>
+            <th colspan="4" class="seccion">1. Datos del alumno/a</th>
+          </tr>
+          <tr>
+            <th><label for="nombre">Nombre *</label></th>
+            <td><input type="text" id="nombre" name="nombre" required></td>
+            <th rowspan="3"><label for="foto">Fotografía</label></th>
+            <td rowspan="3">
+              <input type="file" id="foto" name="foto" accept="image/*">
+              <p>Tamaño carné, formato JPG o PNG.</p>
+            </td>
+          </tr>
+          <tr>
+            <th><label for="apellidos">Apellidos *</label></th>
+            <td><input type="text" id="apellidos" name="apellidos" required></td>
+          </tr>
+          <tr>
+            <th><label for="nacimiento">Fecha de nacimiento *</label></th>
+            <td><input type="date" id="nacimiento" name="nacimiento" required></td>
+          </tr>
+          <tr>
+            <th><label for="telefono">Teléfono *</label></th>
+            <td><input type="tel" id="telefono" name="telefono" placeholder="600 000 000" pattern="[0-9]{9}" required></td>
+            <th><label for="correo">Correo electrónico</label></th>
+            <td><input type="email" id="correo" name="correo" placeholder="nombre@correo.es"></td>
+          </tr>
+          <tr>
+            <th><label for="direccion">Dirección</label></th>
+            <td colspan="3"><input type="text" id="direccion" name="direccion" placeholder="Calle, número, localidad"></td>
+          </tr>
+        </tbody>
+
+        <!-- ========== 2. DATOS DEL TUTOR LEGAL ========== -->
+        <tbody>
+          <tr>
+            <th colspan="4" class="seccion">2. Padre, madre o tutor legal (solo menores de edad)</th>
+          </tr>
+          <!--
+            TODO 2 · Completa esta sección con DOS filas:
+              Fila A: "Nombre y apellidos" -> un campo de texto que ocupe las 3 columnas restantes (colspan).
+              Fila B: "Teléfono" (campo tel, 9 cifras con pattern)  |  "Parentesco" -> lista desplegable
+                      (select) con las opciones: -- Selecciona --, Madre, Padre, Tutor/a legal.
+            Recuerda: cada etiqueta en un <th> con <label for="...">, cada control en un <td> con su id y name.
+          -->
+
+              <th>
+                  <label for="nombre-completo">Nombre y apellidos</label>
+              </th>
+
+              <td colspan="3">
+                  <input name="nombreCompleto" id="nombre-completo" type="text">
+              </td>
+          </tr>
+
+          <tr>
+              <th>
+                  <label for="phone">Teléfono</label>
+              </th>
+
+              <td>
+                  <input id="phone" name="phone" type="tel" pattern="\d{1,9}" maxlength="9">
+              </td>
+
+              <th>
+                  <label for="parentest">Parentesco</label>
+              </th>
+
+              <td>
+                  <select name="parentest" id="parentest">
+                      <option value="" disabled selected>-- Seleccionar --</option>
+
+                      <option value="madre">Madre</option>
+                      <option value="padre">Padre</option>
+                      <option value="tutorLegal">Tutor/a legal</option>
+                    </select>
+              </td>
+          </tr>
+        </tbody>
+
+        <!-- ========== 3. FORMACIÓN MUSICAL ========== -->
+        <!--
+          TODO 3 · Crea un nuevo <tbody> con la fila de cabecera "3. Formación musical"
+                   (th con colspan="4" y class="seccion") y estas filas:
+            Fila A: "Modalidad *" -> 4 botones de opción (radio, mismo name, obligatorio), ocupando 3 columnas:
+                    Música y movimiento (4-7 años) / Lenguaje musical / Lenguaje musical + instrumento / Adultos
+            Fila B: "Instrumento" -> select agrupado con <optgroup>:
+                       Cuerda: Violín, Violonchelo, Guitarra
+                       Viento madera: Flauta travesera, Clarinete, Saxofón
+                       Viento metal: Trompeta, Trombón
+                       Percusión y teclado: Percusión, Piano
+                    | "Años de estudio previos" -> campo numérico entre 0 y 15, valor inicial 0.
+            Fila C: "¿Tiene instrumento propio?" -> radio Sí / No (No marcado por defecto)
+                    | "Agrupaciones de interés" -> casillas: Banda municipal, Coro,
+                      Orquesta de cuerda, Combo de música moderna.
+            Fila D: "Horario preferido" -> casillas (3 columnas): Lunes y miércoles (tarde),
+                    Martes y jueves (tarde), Viernes (tarde), Sábado (mañana).
+            Fila E: "Observaciones" -> área de texto de 4 filas, máximo 500 caracteres,
+                    con texto de ayuda (placeholder), ocupando 3 columnas.
+        -->
+
+        <tbody>
+            <tr>
+                <th colspan="4" class="seccion">
+                    3. Formación musical
+                </th>
+            </tr>
+        </tbody>
+
+        <!-- ========== 4. AUTORIZACIONES ========== -->
+        <!--
+          TODO 4 · Crea un <tbody> con la cabecera "4. Autorizaciones" y UNA fila con una sola celda
+                   que ocupe las 4 columnas, con dos casillas:
+                   - Aceptación del tratamiento de datos personales (OBLIGATORIA).
+                   - Autorización para el uso de fotografías en audiciones y conciertos (opcional).
+        -->
+
+        <!-- ========== BOTONES ========== -->
+        <!--
+          TODO 5 · Crea un <tfoot> con una fila y una celda que ocupe las 4 columnas, con dos botones:
+                   "Enviar inscripción" (envía el formulario) y "Borrar datos" (lo limpia).
+        -->
+      </table>
+    </form>
+  </main>
+
+  <footer>
+    <p>Los campos marcados con * son obligatorios.</p>
+    <p>Escuela Municipal de Música · Ayuntamiento de Navalmoral de la Mata</p>
+  </footer>
+
+</body>
+</html>

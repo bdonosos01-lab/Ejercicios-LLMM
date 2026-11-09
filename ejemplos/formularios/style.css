@@ -1,4 +1,4 @@
-.labels {
+.trs {
     color: white;
 }
 
@@ -6,4 +6,9 @@
     background-color: white;
     color: grey;
     font-weight: bold;
+}
+
+p, h3 {
+    margin-left: 25px;
+    margin-right: 25px;
 }

@@ -1,58 +1,121 @@
 <!DOCTYPE html>
 <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>IES Augustóbriga</title>
+        <meta name="desription" content="Página web del IES Augustóbriga" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <title>IES Augustóbriga</title>
-    <meta name="desription" content="Página web del IES Augustóbriga" />
-    <link rel="stylesheet" href="style.css" />
-</head>
+    <body>
+        <form action="manejador.html" enctype="multipart/form-data" method="post">
+            <table style="border: 3px solid grey; margin: auto; background-color: black;">
+                <caption><h1>Formularios</h1></caption>
+                <tr class="trs">
+                    <td>
+                        <p>
+                            <label for="nombre">Nombre: </label>
+                            <input class="inputs" id="nombre" type="text" name="nombre" maxlength="4">  
+                        </p>
 
-<body>
-    <script src="js/script..js"></script>
-    <table style="border: 3px solid grey; margin: auto; background-color: black;">
-        <caption>
-            <h1>Formularios</h1>
-        </caption>
-        <form action="manejador.html" enctype="multipart/form-data" method="post"></form>
-        
-        <tr>
-            <td>
-                <p>
-                    <label class="labels" for="nombre">Nombre: </label>
-                    <input class="inputs" type="text" name="nombre" maxlength="4">  
-                </p>
+                        <p>
+                            <label class="labels">
+                                <input type="radio" name="etapa" id="menos20" value="niñito" checked>
+                                Menos De 20 Años
+                            </label>
+                        </p>
 
-                <p>
-                    <label class="labels">
-                        <input type="radio" name="etapa" id="menos20" value="niñito" checked>
-                        Menos De 20 Años
-                    </label>
-                </p>
+                        <p>
+                            <label class="labels">
+                                <input type="radio" name="etapa" id="mas20" value="adulto">
+                                Más de 20 Años
+                            </label>
+                        </p>
 
-                <p>
-                    <label class="labels">
-                        <input type="radio" name="etapa" id="mas20" value="adulto">
-                        Más de 20 Años
-                    </label>
-                </p>
+                        <p>
+                            <label class="labels">
+                                <input type="radio" name="etapa" id="500" value="nose">
+                                Más de 500 Años
+                            </label>
+                        </p>
 
-                <p>
-                    <label class="labels">
-                        <input type="radio" name="etapa" id="500" value="nose">
-                        Más de 500 Años
-                    </label>
-                </p>
+                        <p>
+                            <label class="labels">
+                                <input type="radio" name="etapa" id="1500" value="mayor">
+                                Más de 1500 Años
+                            </label>
+                        </p>
+                    </td>
+                    
+                    <td>
+                        <h3>Aficiones</h3>
 
-                <p>
-                    <label class="labels">
-                        <input type="radio" name="etapa" id="1500" value="mayor">
-                        Más de 1500 Años
-                    </label>
-                </p>
-            </td>
-        </tr>
-    </table>
-</body>
+                        <p>
+                            <input type="checkbox" id="ajedrezCheckBox" name="aficiones" value="ajedrez">
+                            <label for="ajedrezCheckBox">Ajedrez</label>    
+                        </p>
+                        
+                        <p>
+                            <input type="checkbox" id="nadarCheckBox" name="aficiones" value="nadar">
+                            <label for="nadarCheckBox">Nadar</label>    
+                        </p>
+                        <p>
+                            <input type="checkbox" id="juegosCheckBox" name="aficiones" value="juegos">
+                            <label for="juegosCheckBox">Juegos</label>    
+                        </p>
+                        <p>
+                            <input type="checkbox" id="viajarCheckBox" name="aficiones" value="viajar">
+                            <label for="viajarCheckBox">Viajar</label>    
+                        </p>
+                    </td>
 
+                <tr class="trs">
+                    <td>
+                        <h3>
+                            <label for="fecha">Selecciona una fecha:</label>
+                            <input type="date" name="fecha" id="fecha">
+                        </h3>
+                    </td>
+                    <td>
+                        <h3>
+                            <label for="color">Selecciona un color:</label>
+                            <input type="color" name="color" id="color" value="#000000">
+                        </h3>
+                    </td>
+                </tr>
+
+                <tr class="trs">
+                    <td>
+                        <h3>
+                            <label for="rango">Selecciona un rango</label>
+                            <br>
+                            <input type="range" name="rango" id="rango" max="5" min="0" value="0">
+
+                            <span id="valor-rango">0</span>
+                        
+                        </h3>
+                    </td>
+                    <td>
+                        <h3>
+                            <label for="color">Selecciona un archivo</label>
+                            <br>
+                            <input type="file" name="color" id="color">
+                        </h3>
+                    </td>
+                </tr>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="2" style="background-color: red;">
+                            <p>
+                                <button style="margin-right: 25px;" type="submit">Enviar</button>
+                                <button id="buttonRestart" type="reset">Reiniciar</button>
+                            </p>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </form>
+    </body>
+    <script src="script.js"></script>
 </html>
