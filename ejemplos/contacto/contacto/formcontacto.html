@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>IES Augustóbriga - Contacto</title>
+    <meta name="description" content="Página web del IES Augustóbriga" />
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+    <header>
+        <h1>IES Augustóbriga</h1>
+    </header>
+
+    <nav>
+        <a href="#noticias">Inicio</a>
+        <a href="#actividades">Noticias</a>
+        <a href="./formcontacto.html">Contacto</a>
+        <a href="../index.html" target="_self" title="Inicio">Inicio</a>
+    </nav>
+
+    <main>
+        <section id="contacto">
+            <h2>Formulario de Contacto</h2>
+            <p>Rellena el siguiente formulario y nos pondremos en contacto contigo.</p>
+
+            <form action="manejador.html" method="post">
+                <div>
+                    <label for="nombre">Nombre y apellidos:</label><br>
+                    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre completo" required>
+                </div>
+                <br>
+
+                <div>
+                    <label for="email">Correo electrónico:</label><br>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                </div>
+                <br>
+
+                <div>
+                    <label for="telefono">Teléfono (opcional):</label><br>
+                    <input type="tel" id="telefono" name="telefono" placeholder="600 000 000">
+                </div>
+                <br>
+
+                <div>
+                    <label for="asunto">Motivo de la consulta:</label><br>
+                    <select id="asunto" name="asunto">
+                        <option value="sugestion">Sugerencia</option>
+                        <option value="problemWithAccess">Problema de Acceso</option>
+                        <option value="urgent">Urgente (Solo usar si es urgente)</option>
+                        <option value="other">Otro motivo</option>
+                    </select>
+                </div>
+                <br>
+
+                <div>
+                    <label for="mensaje">Mensaje:</label><br>
+                    <textarea id="mensaje" name="mensaje" rows="5" cols="40" placeholder="Escribe aquí tu consulta..." required></textarea>
+                </div>
+                <br>
+
+                <div>
+                    <input type="checkbox" id="privacidad" name="privacidad" required>
+                    <label for="privacidad">He leído y acepto la política de privacidad.</label>
+                </div>
+                <br>
+
+                <div>
+                    <button type="submit">Enviar mensaje</button>
+                    <button type="reset">Borrar datos</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
