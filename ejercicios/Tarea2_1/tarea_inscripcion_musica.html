@@ -129,79 +129,186 @@
 
         <!-- ========== 2. DATOS DEL TUTOR LEGAL ========== -->
         <tbody>
-          <tr>
-            <th colspan="4" class="seccion">2. Padre, madre o tutor legal (solo menores de edad)</th>
-          </tr>
-          <!--
-            TODO 2 · Completa esta sección con DOS filas:
-              Fila A: "Nombre y apellidos" -> un campo de texto que ocupe las 3 columnas restantes (colspan).
-              Fila B: "Teléfono" (campo tel, 9 cifras con pattern)  |  "Parentesco" -> lista desplegable
-                      (select) con las opciones: -- Selecciona --, Madre, Padre, Tutor/a legal.
-            Recuerda: cada etiqueta en un <th> con <label for="...">, cada control en un <td> con su id y name.
-          -->
-
-              <th>
-                  <label for="nombre-completo">Nombre y apellidos</label>
-              </th>
-
-              <td colspan="3">
-                  <input name="nombreCompleto" id="nombre-completo" type="text">
-              </td>
-          </tr>
-
-          <tr>
-              <th>
-                  <label for="phone">Teléfono</label>
-              </th>
-
-              <td>
-                  <input id="phone" name="phone" type="tel" pattern="\d{1,9}" maxlength="9">
-              </td>
-
-              <th>
-                  <label for="parentest">Parentesco</label>
-              </th>
-
-              <td>
-                  <select name="parentest" id="parentest">
-                      <option value="" disabled selected>-- Seleccionar --</option>
-
-                      <option value="madre">Madre</option>
-                      <option value="padre">Padre</option>
-                      <option value="tutorLegal">Tutor/a legal</option>
+            <tr>
+                <th colspan="4" class="seccion">2. Padre, madre o tutor legal (solo menores de edad)</th>
+            </tr>
+            <!--
+                TODO 2 · Completa esta sección con DOS filas:
+                Fila A: "Nombre y apellidos" -> un campo de texto que ocupe las 3 columnas restantes (colspan).
+                Fila B: "Teléfono" (campo tel, 9 cifras con pattern)  |  "Parentesco" -> lista desplegable (select) con las opciones: -- Selecciona --, Madre, Padre, Tutor/a legal.
+                Recuerda: cada etiqueta en un <th> con <label for="...">, cada control en un <td> con su id y name.
+            -->
+        
+            <th>
+                <label for="nombre-completo">Nombre y apellidos</label>
+            </th>
+        
+            <td colspan="3">
+                <input name="nombreCompleto" id="nombre-completo" type="text">
+            </td>
+            </tr>
+        
+            <tr>
+                <th>
+                    <label for="phone">Teléfono</label>
+                </th>
+        
+                <td>
+                    <input id="phone" name="phone" type="tel" pattern="\d{1,9}" maxlength="9">
+                </td>
+        
+                <th>
+                    <label for="parentest">Parentesco</label>
+                </th>
+        
+                <td>
+                    <select name="parentest" id="parentest">
+                        <option value="" disabled selected>-- Seleccionar --</option>
+        
+                        <option value="madre">Madre</option>
+                        <option value="padre">Padre</option>
+                        <option value="tutorLegal">Tutor/a legal</option>
                     </select>
-              </td>
-          </tr>
+                </td>
+            </tr>
         </tbody>
 
         <!-- ========== 3. FORMACIÓN MUSICAL ========== -->
         <!--
-          TODO 3 · Crea un nuevo <tbody> con la fila de cabecera "3. Formación musical"
-                   (th con colspan="4" y class="seccion") y estas filas:
-            Fila A: "Modalidad *" -> 4 botones de opción (radio, mismo name, obligatorio), ocupando 3 columnas:
+            TODO 3 · Crea un nuevo <tbody> con la fila de cabecera "3. Formación musical" (th con colspan="4" y class="seccion") y estas filas:
+                Fila A: "Modalidad *" -> 4 botones de opción (radio, mismo name, obligatorio), ocupando 3 columnas:
                     Música y movimiento (4-7 años) / Lenguaje musical / Lenguaje musical + instrumento / Adultos
-            Fila B: "Instrumento" -> select agrupado con <optgroup>:
-                       Cuerda: Violín, Violonchelo, Guitarra
-                       Viento madera: Flauta travesera, Clarinete, Saxofón
-                       Viento metal: Trompeta, Trombón
-                       Percusión y teclado: Percusión, Piano
-                    | "Años de estudio previos" -> campo numérico entre 0 y 15, valor inicial 0.
-            Fila C: "¿Tiene instrumento propio?" -> radio Sí / No (No marcado por defecto)
-                    | "Agrupaciones de interés" -> casillas: Banda municipal, Coro,
-                      Orquesta de cuerda, Combo de música moderna.
-            Fila D: "Horario preferido" -> casillas (3 columnas): Lunes y miércoles (tarde),
-                    Martes y jueves (tarde), Viernes (tarde), Sábado (mañana).
-            Fila E: "Observaciones" -> área de texto de 4 filas, máximo 500 caracteres,
-                    con texto de ayuda (placeholder), ocupando 3 columnas.
+                Fila B:
+                    "Instrumento" -> select agrupado con <optgroup>:
+                        Cuerda: Violín, Violonchelo, Guitarra
+                        Viento madera: Flauta travesera, Clarinete, Saxofón
+                        Viento metal: Trompeta, Trombón
+                        Percusión y teclado: Percusión, Piano
+                    "Años de estudio previos" -> campo numérico entre 0 y 15, valor inicial 0.
+                Fila C: "¿Tiene instrumento propio?" -> radio Sí / No (No marcado por defecto) | "Agrupaciones de interés" -> casillas: Banda municipal, Coro, Orquesta de cuerda, Combo de música moderna.
+                Fila D: "Horario preferido" -> casillas (3 columnas): Lunes y miércoles (tarde), Martes y jueves (tarde), Viernes (tarde), Sábado (mañana).
+                Fila E: "Observaciones" -> área de texto de 4 filas, máximo 500 caracteres, con texto de ayuda (placeholder), ocupando 3 columnas.
         -->
-
+        
         <tbody>
             <tr>
                 <th colspan="4" class="seccion">
                     3. Formación musical
                 </th>
             </tr>
+
+            <tr>
+                <th>
+                    <label for="modalidades">Modalidad</label>
+                </th>
+
+                <td colspan="3" style="display: inline-flexbox;">
+                    <input type="radio" name="modalidades" value="musicAndMovement">
+                    Música y movimiento (4-7 años)
+                    <input type="radio" name="modalidades" value="musicalLanguage">
+                    Lenguaje musical
+                    <br>
+                    <input type="radio" name="modalidades" value="mLAndInstrument">
+                    Lenguaje musical + instrumento
+                    <input type="radio" name="modalidades" value="adults">
+                    Adultos
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    <label for="">Instrumento</label>
+                </th>
+
+                <td colspan="2">
+                    <select id="instrument" name="instrument">
+                        <option value="" disabled selected>ㅤㅤㅤㅤㅤㅤㅤㅤㅤ-- Selecciona --</option>
+
+                        <optgroup label="Cuerda">
+                            <option value="violin">Violín</option>
+                            <option value="cello">Violonchelo</option>
+                            <option value="guitar">Guitarra</option>
+                        </optgroup>
+
+                        <optgroup label="Viento madera">
+                            <option value="transverseFlute">Flauta travesera</option>
+                            <option value="clarinet">Clarinete</option>
+                            <option value="saxophone">Saxofón</option>
+                        </optgroup>
+
+                        <optgroup label="Viento metal">
+                            <option value="trumpet">Trompeta</option>
+                            <option value="trombone">Trombón</option>
+                        </optgroup>
+
+                        <optgroup label="Percusión y teclado">
+                            <option value="percussion">Percusión</option>
+                            <option value="piano">Piano</option>
+                        </optgroup>
+                    </select>
+                </td>
+
+                <td colspan="2">
+                    <label for="prevYearsStudied">Años de estudio previos</label>
+                    <input type="number" name="prevYearsStudied" min="0" max="15" value="0">
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    ¿Tiene instrumento propio?
+                </th>
+
+                <td>
+                    <label for="haveOwnInstrument">No</label>
+                    <input type="radio" name="haveOwnInstrument" value="no" checked>
+                    
+                    <label for="haveOwnInstrument">Si</label>
+                    <input type="radio" name="haveOwnInstrument" value="yes">
+                </td>
+
+                <td colspan="2">
+                    <label for="interests">Agrupaciones de interés:</label>
+                    <br>
+                    <input type="checkbox">Banda municipal
+                    <input type="checkbox">Coro
+                    <br>
+                    <input type="checkbox">Orquesta de cuerda
+                    <input type="checkbox">Combo de música moderna
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    <label>Horario preferido</label>
+                </th>
+
+                <td colspan="3">
+                    <input type="checkbox" name="preferredSchedule" value="monWedAfternoon">
+                    <label for="monWedAfternoon">Lunes y miércoles (tarde)</label>
+
+                    <input type="checkbox" name="preferredSchedule" value="tueThuAfternoon">
+                    <label for="tueThuAfternoon">Martes y jueves (tarde)</label>
+                    <br>
+                    <input type="checkbox" name="preferredSchedule" value="friAfternoon">
+                    <label for="friAfternoon">Viernes (tarde)</label>
+
+                    <input type="checkbox" name="preferredSchedule" value="satMorning">
+                    <label for="satMorning">Sábado (mañana)</label>
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    <label for="observations">Observaciones</label>
+                </th>
+
+                <td colspan="3">
+                    <textarea name="observations" rows="4" maxlength="500" placeholder="Escribe aquí cualquier observación adicional (máximo 500 caracteres)..."></textarea>
+                </td>
+            </tr>
         </tbody>
+
 
         <!-- ========== 4. AUTORIZACIONES ========== -->
         <!--
@@ -211,11 +318,38 @@
                    - Autorización para el uso de fotografías en audiciones y conciertos (opcional).
         -->
 
+        <tbody>
+            <tr>
+                <th colspan="4" class="seccion">
+                    4. Autorizaciones
+                </th>
+            </tr>
+
+            <tr>
+                <td colspan="4">
+                    <input type="checkbox" id="acceptDataProcessing" name="acceptDataProcessing" required>
+                    <label for="acceptDataProcessing">Acepto el tratamiento de datos personales (obligatorio). <strong>*</strong></label>
+                    <br>
+                    <input type="checkbox" id="authorizePhotos" name="authorizePhotos">
+                    <label for="authorizePhotos">Autorizo el uso de fotografías en audiciones y conciertos (opcional).</label>
+                </td>
+            </tr>
+        </tbody>
+
         <!-- ========== BOTONES ========== -->
         <!--
           TODO 5 · Crea un <tfoot> con una fila y una celda que ocupe las 4 columnas, con dos botones:
                    "Enviar inscripción" (envía el formulario) y "Borrar datos" (lo limpia).
         -->
+                   
+        <tfoot>
+            <tr>
+                <td colspan="4">
+                    <button type="submit">Enviar inscripción</button>
+                    <button type="reset">Borrar datos</button>
+                </td>
+            </tr>
+        </tfoot>
       </table>
     </form>
   </main>
