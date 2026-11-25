@@ -1,0 +1,7 @@
+p[name*="cude"]{
+    font-size: 50px;
+    color: #ff0000;
+}
+p[name^="el"]{
+    color: #12ef1d;
+}
