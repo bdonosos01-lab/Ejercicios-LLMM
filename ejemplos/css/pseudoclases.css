@@ -14,10 +14,7 @@
             margin: 3px 0;
         }
 
-        /* :nth-child(valor) → selecciona el hijo según posición */
-        li:nth-child(2) {
-            background-color: lightblue;
-        }
+       
 
         /* :first-child → primer hijo */
         li:first-child {
@@ -31,7 +28,14 @@
             background-color: lightcoral;
         }
 
-        /* :only-child → único hijo */
+        /* :only-child → único hijo 
+            El only-child no fuurla porque tiene un h2
+        */
+
+        div:nth-child(2) h2:first-child {
+            color: red;
+        }
+
         p:only-child {
             color: white;
             background-color: purple;
@@ -40,5 +44,13 @@
 
         /* :not(selector) → selecciona todo lo que no coincide con selector */
         li:not(:first-child):not(:last-child) {
-            background-color: lightgray;
+            background-color: rgb(230, 175, 175);
+        }
+
+        /* :nth-child(valor) → selecciona el hijo según posición
+            Las cosas tienen especificidad, vamos, puntos. li suma 1, first-c and last-c suman 10, tiene 21, se muestra aunque se superponga abajo otra.
+            si hago nth-child(2) dos veces, suman 21.
+        */
+        li:nth-child(2):nth-child(2) {
+            background-color: rgb(53, 194, 236);
         }

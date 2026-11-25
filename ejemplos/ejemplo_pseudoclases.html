@@ -18,7 +18,10 @@
 
     <div>
         <h2>Lista 2 (solo un elemento)</h2>
-        <p>Único párrafo</p> <!-- only-child -->
+        <div>
+            <p>Único párrafo</p> <!-- only-child -->
+        </div>
+        
     </div>
 
     <div>
@@ -26,8 +29,8 @@
         <ul>
             <li>Elemento A</li> <!-- first-child -->
             <li>Elemento B</li> <!-- nth-child(2) y not(first/last) -->
-            <li>Elemento C</li> <!-- last-child -->
-            <li>Elemento D</li> <!-- not(first/last) -->
+            <li>Elemento C</li> <!-- not(first/last) es el nth 3, nth-child(3) -->
+            <li>Elemento D</li> <!--  last-child -->
         </ul>
     </div>
 </body>
